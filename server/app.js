@@ -6,12 +6,19 @@ import routerCourse from "./router/course.js";
 import routerUser from "./router/user.js";
 import cors from "cors";
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://your-frontend-domain.com",
+    credentials: true, // Enable cookies with credentials
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    optionsSuccessStatus: 204,
+  })
+);
 
 mongoose.connect("mongodb://localhost:27017/course", {
   // useNewUrlParser: true,

@@ -1,9 +1,18 @@
 import axios from "axios";
 import Course from "../models/course.js";
+import fs from "fs";
 
 export const getCourse = async (req, res) => {
   try {
+    // const filePath = "./data.json";
+    // const rawData = fs.readFileSync(filePath);
+    // const coursesData = JSON.parse(rawData);
+
+    // await Course.insertMany(coursesData);
+
     const course = await Course.find();
+
+    // const allCourse = [...coursesData, ...course];
 
     res.status(201).json(course);
   } catch (error) {

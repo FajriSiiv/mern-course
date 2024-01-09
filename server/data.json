@@ -1,0 +1,182 @@
+[
+  {
+    "_id": 1,
+    "title": "Introduction to Computer Science",
+    "description": "A comprehensive introduction to the field of computer science.",
+    "instructor": "Dr. Smith",
+    "price": 49.99,
+    "startDate": "2024-02-15",
+    "category": "Computer Science"
+  },
+  {
+    "_id": 2,
+    "title": "Web Development Bootcamp",
+    "description": "An intensive bootcamp covering HTML, CSS, and JavaScript for web development.",
+    "instructor": "Emily Johnson",
+    "price": 79.99,
+    "startDate": "2024-03-01",
+    "category": "Web Development"
+  },
+  {
+    "_id": 3,
+    "title": "Python Programming Basics",
+    "description": "Learn the fundamentals of Python programming language.",
+    "instructor": "Prof. Rodriguez",
+    "price": 59.99,
+    "startDate": "2024-04-10",
+    "category": "Programming"
+  },
+  {
+    "_id": 4,
+    "title": "Data Science Essentials",
+    "description": "Explore the essentials of data science, including statistics and data analysis.",
+    "instructor": "Dr. Williams",
+    "price": 69.99,
+    "startDate": "2024-05-05",
+    "category": "Data Science"
+  },
+  {
+    "_id": 5,
+    "title": "Mobile App Development Workshop",
+    "description": "Hands-on workshop on developing mobile applications for iOS and Android.",
+    "instructor": "Alex Turner",
+    "price": 89.99,
+    "startDate": "2024-06-20",
+    "category": "Mobile App Development"
+  },
+  {
+    "_id": 6,
+    "title": "Introduction to Artificial Intelligence",
+    "description": "An overview of artificial intelligence and its applications.",
+    "instructor": "Dr. Chen",
+    "price": 74.99,
+    "startDate": "2024-07-01",
+    "category": "Artificial Intelligence"
+  },
+  {
+    "_id": 7,
+    "title": "Cybersecurity Fundamentals",
+    "description": "Learn the basics of cybersecurity and how to protect systems from threats.",
+    "instructor": "Sarah Adams",
+    "price": 64.99,
+    "startDate": "2024-08-10",
+    "category": "Cybersecurity"
+  },
+  {
+    "_id": 8,
+    "title": "React.js Crash Course",
+    "description": "A quick and intensive crash course on building web applications with React.js.",
+    "instructor": "Mark Reynolds",
+    "price": 54.99,
+    "startDate": "2024-09-15",
+    "category": "Web Development"
+  },
+  {
+    "_id": 9,
+    "title": "Java Programming for Beginners",
+    "description": "Beginner-friendly course covering the basics of Java programming.",
+    "instructor": "Dr. Anderson",
+    "price": 49.99,
+    "startDate": "2024-10-01",
+    "category": "Programming"
+  },
+  {
+    "_id": 10,
+    "title": "Big Data Analytics",
+    "description": "Explore the world of big data and analytics for business insights.",
+    "instructor": "Prof. Davis",
+    "price": 79.99,
+    "startDate": "2024-11-10",
+    "category": "Data Science"
+  },
+  {
+    "_id": 11,
+    "title": "Mobile Game Development",
+    "description": "Learn the basics of developing games for mobile platforms.",
+    "instructor": "Chris Mitchell",
+    "price": 69.99,
+    "startDate": "2024-12-05",
+    "category": "Mobile App Development"
+  },
+  {
+    "_id": 12,
+    "title": "Machine Learning Applications",
+    "description": "Discover practical applications of machine learning in various domains.",
+    "instructor": "Dr. Taylor",
+    "price": 89.99,
+    "startDate": "2025-01-15",
+    "category": "Machine Learning"
+  },
+  {
+    "_id": 13,
+    "title": "Full-Stack Web Development",
+    "description": "Comprehensive course covering both front-end and back-end web development.",
+    "instructor": "Linda Rodriguez",
+    "price": 99.99,
+    "startDate": "2025-02-01",
+    "category": "Web Development"
+  },
+  {
+    "_id": 14,
+    "title": "C++ Programming Masterclass",
+    "description": "Advanced course for mastering C++ programming language.",
+    "instructor": "Prof. Mitchell",
+    "price": 79.99,
+    "startDate": "2025-03-10",
+    "category": "Programming"
+  },
+  {
+    "_id": 15,
+    "title": "Data Visualization with D3.js",
+    "description": "Learn to create interactive data visualizations using D3.js library.",
+    "instructor": "Eva Carter",
+    "price": 59.99,
+    "startDate": "2025-04-05",
+    "category": "Data Science"
+  },
+  {
+    "_id": 16,
+    "title": "Android App Development",
+    "description": "Build Android applications from scratch in this hands-on course.",
+    "instructor": "Michael Turner",
+    "price": 84.99,
+    "startDate": "2025-05-20",
+    "category": "Mobile App Development"
+  },
+  {
+    "_id": 17,
+    "title": "Natural Language Processing",
+    "description": "Explore the field of natural language processing and its applications.",
+    "instructor": "Dr. Davis",
+    "price": 74.99,
+    "startDate": "2025-06-01",
+    "category": "Artificial Intelligence"
+  },
+  {
+    "_id": 18,
+    "title": "Ethical Hacking and Penetration Testing",
+    "description": "Learn ethical hacking techniques and penetration testing strategies.",
+    "instructor": "Alexandra Reed",
+    "price": 69.99,
+    "startDate": "2025-07-10",
+    "category": "Cybersecurity"
+  },
+  {
+    "_id": 19,
+    "title": "Vue.js Framework Essentials",
+    "description": "Essential concepts and hands-on practice with the Vue.js framework.",
+    "instructor": "Daniel Scott",
+    "price": 54.99,
+    "startDate": "2025-08-15",
+    "category": "Web Development"
+  },
+  {
+    "_id": 20,
+    "title": "Deep Learning Fundamentals",
+    "description": "An introduction to the fundamentals of deep learning and neural networks.",
+    "instructor": "Dr. Turner",
+    "price": 89.99,
+    "startDate": "2025-09-15",
+    "category": "Machine Learning"
+  }
+]
