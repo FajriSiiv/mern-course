@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Star } from "lucide-react";
-import { CarouselCard } from "@/components/carouselCard";
+// import { CarouselCard } from "@/components/carouselCard";
 import { getAPICourse, handleDeleteCourse } from "@/api/api";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -67,9 +67,7 @@ const Course = () => {
 
   return (
     <div className="p-10">
-      <div className="p-10">
-        <CarouselCard />
-      </div>
+      <div className="p-10">{/* <CarouselCard /> */}</div>
 
       <div className="mt-10">
         <h2 className="text-2xl font-bold">Kursus terpopuler di SiCourse</h2>

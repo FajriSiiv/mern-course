@@ -15,7 +15,7 @@ const Detail = () => {
         const data = await getAPICourse();
 
         const filterData = data.filter(
-          (fill) => String(fill._id) === router.id
+          (fillId: any) => String(fillId._id) === router.id
         )[0];
 
         setCourseData(filterData);
