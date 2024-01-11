@@ -35,6 +35,8 @@ export const getCourseById = async (req, res) => {
 
 export const addCourse = async (req, res) => {
   const { title, description, instructor, price, startDate } = req.body;
+  const MAX_ITEMS = 10;
+  const courseItem = await Course.countDocuments();
 
   const randomImageResponse = await axios.get(
     "https://source.unsplash.com/random?web+code",
@@ -44,6 +46,10 @@ export const addCourse = async (req, res) => {
     }
   );
   const imageUrl = randomImageResponse.request.res.responseUrl;
+
+  if (courseItem >= MAX_ITEMS) {
+    return res.status(400).json({ error: "Maximum limit reached" });
+  }
 
   try {
     const newCourse = new Course({

@@ -37,3 +37,5 @@ export const AuthToken = (req, res, next) => {
     next();
   });
 };
+
+// Max course 10 item

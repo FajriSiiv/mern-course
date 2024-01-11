@@ -5,25 +5,38 @@ import mongoose from "mongoose";
 import routerCourse from "./router/course.js";
 import routerUser from "./router/user.js";
 import cors from "cors";
+import dotenv from "dotenv";
+import { ServerApiVersion } from "mongodb";
+
 const app = express();
 const port = 5000;
 
+const PORT = process.env.PORT || 5000;
+const mongoURI = process.env.HELLO_ENV;
+
+dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://your-frontend-domain.com",
+    // origin: "http://your-frontend-domain.com",
+    origin: "*", // for testing nodejs crud
     credentials: true, // Enable cookies with credentials
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     optionsSuccessStatus: 204,
   })
 );
 
-mongoose.connect("mongodb://localhost:27017/course", {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
-});
+if (!process.env.HELLO_ENV) {
+  console.error(
+    "MongoDB URI is not defined. Check your environment variables."
+  );
+
+  process.exit(1);
+}
+
+mongoose.connect(process.env.HELLO_ENV);
 
 const db = mongoose.connection;
 
@@ -33,7 +46,7 @@ db.once("open", () => {
   console.log("Connected to MongoDB");
 });
 
-app.use(routerUser);
+// app.use(routerUser);
 app.use(routerCourse);
 
 app.get("/check-cookies", (req, res) => {
