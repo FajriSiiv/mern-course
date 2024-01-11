@@ -1,5 +1,5 @@
 export const getAPICourse = async () => {
-  const res = await fetch("http://localhost:5000/course");
+  const res = await fetch("https://backend-mern-course.vercel.app/course");
   const data = await res.json();
 
   return data;
@@ -7,7 +7,7 @@ export const getAPICourse = async () => {
 
 export const handleAddCourse = async (body: any) => {
   try {
-    await fetch("http://localhost:5000/course", {
+    await fetch("https://backend-mern-course.vercel.app/course", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export const handleAddCourse = async (body: any) => {
 };
 
 export const handleDeleteCourse = async (id: any) => {
-  const API_URL = "http://localhost:5000/course";
+  const API_URL = "https://backend-mern-course.vercel.app/course";
 
   try {
     await fetch(`${API_URL}/${id}`, {
