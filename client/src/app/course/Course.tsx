@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 import { CarouselCard } from "@/components/carouselCard";
-import { getAPICourse } from "@/api/api";
+import { getAPICourse, handleDeleteCourse } from "@/api/api";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
@@ -32,6 +32,17 @@ export const Card = (props?: any) => {
         >
           Detail
         </Button>
+
+        <Button
+          variant="destructive"
+          className="float-right"
+          onClick={() => {
+            handleDeleteCourse(props.id);
+            props.fetchData();
+          }}
+        >
+          Delete
+        </Button>
       </div>
     </div>
   );
@@ -40,16 +51,17 @@ export const Card = (props?: any) => {
 const Course = () => {
   const [courseData, setCourseData] = useState<any[]>([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getAPICourse();
-        setCourseData(data);
-      } catch (error) {
-        console.error("Error fetching course data:", error);
-      }
-    };
+  const fetchData = async () => {
+    try {
+      const data = await getAPICourse();
+      setCourseData(data);
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching course data:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -69,6 +81,7 @@ const Course = () => {
               instructor={course.instructor}
               price={course.price}
               id={course._id}
+              fetchData={fetchData}
             />
           ))}
         </div>
