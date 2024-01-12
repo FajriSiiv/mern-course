@@ -22,7 +22,7 @@ app.use(
   cors({
     origin:  function (origin, callback) {
       // Check if the origin is allowed (you can customize this logic)
-      const allowedOrigins = ["http://localhost:3000", "https://frontend-course-mern.vercel.app"];
+      const allowedOrigins =  "https://frontend-course-mern.vercel.app";
       const isAllowed = allowedOrigins.includes(origin);
       
       callback(null, isAllowed);
