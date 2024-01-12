@@ -19,18 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Check if the origin is allowed (you can customize this logic)
-      const allowedOrigins = ["https://frontend-course-mern.vercel.app"];
-      const isAllowed = allowedOrigins.includes(origin);
-
-      callback(null, isAllowed);
-    },
-    // credentials: true, // Enable cookies with credentials
-    // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    // optionsSuccessStatus: 204,
-  })
+  cors()
 );
 
 if (!process.env.HELLO_ENV) {
