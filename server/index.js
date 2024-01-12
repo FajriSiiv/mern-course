@@ -20,8 +20,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://frontend-course-mern.vercel.app",
-    // origin: "*", // for testing nodejs crud
+    origin:  function (origin, callback) {
+      // Check if the origin is allowed (you can customize this logic)
+      const allowedOrigins = ["http://localhost:3000", "https://frontend-course-mern.vercel.app"];
+      const isAllowed = allowedOrigins.includes(origin);
+      
+      callback(null, isAllowed);
+    },
     credentials: true, // Enable cookies with credentials
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     optionsSuccessStatus: 204,
