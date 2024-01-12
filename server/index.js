@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://frontend-course-mern.vercel.app";
+    origin: ["https://frontend-course-mern.vercel.app"];
     // credentials: true, // Enable cookies with credentials
     // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     // optionsSuccessStatus: 204,
