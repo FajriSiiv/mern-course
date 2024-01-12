@@ -26,10 +26,10 @@ app.use(
       const isAllowed = allowedOrigins.includes(origin);
       
       callback(null, isAllowed);
-    },
-    credentials: true, // Enable cookies with credentials
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    optionsSuccessStatus: 204,
+    }
+    // credentials: true, // Enable cookies with credentials
+    // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    // optionsSuccessStatus: 204,
   })
 );
 
